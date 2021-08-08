@@ -63,3 +63,11 @@ callByName function
 otherLambda function
 true
 ```
+
+- 다른 함수의 참조에 의한 일반 함수 호출
+```
+val res1 = funcParam(3,2,::sum)
+fun funcParam(a:Int, b:Int, c:(Int,Int) -> Int) : Int{
+  return c(a,b)
+}
+```
